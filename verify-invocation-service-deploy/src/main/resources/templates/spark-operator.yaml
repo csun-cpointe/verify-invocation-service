@@ -37,3 +37,7 @@ spec:
         {{- toYaml . | nindent 6 }}
       {{- end }}
     {{- end }}
+  ignoreDifferences:
+    - kind: Secret
+      jsonPointers:
+        - /data
